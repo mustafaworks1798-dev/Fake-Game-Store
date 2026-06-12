@@ -619,3 +619,13 @@ body {
         width: 100%;
     }
 }
+.profile-link {
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.profile-link:hover {
+    color: #455f8a;
+}
