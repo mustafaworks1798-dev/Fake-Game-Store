@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store | Mustafa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="store">
+        <header class="store-header">
+            <div class="header-left">
+                <i class="fa-solid fa-gamepad"></i>
+                <h1>Game<span>Store</span></h1>
+            </div>
+            <div class="header-center">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search games...">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="trending-section">
+            <div class="trending-header">
+                <div>
+                    <h2>Trending Games</h2>
+                </div>
+            </div>
+            <div class="trending-list" id="trendingList"></div>
+        </div>
+
+        <div class="store-layout">
+            <aside class="filters-sidebar">
+                <h3>Categories</h3>
+                <div class="filter-list" id="filterList">
+                    <button class="filter-btn active" data-category="all">All Games</button>
+                    <button class="filter-btn" data-category="action">Action</button>
+                    <button class="filter-btn" data-category="rpg">RPG</button>
+                    <button class="filter-btn" data-category="sports">Sports</button>
+                    <button class="filter-btn" data-category="puzzle">Puzzle</button>
+                    <button class="filter-btn" data-category="racing">Racing</button>
+                </div>
+            </aside>
+
+            <main class="games-grid" id="gamesGrid"></main>
+
+            <aside class="cart-panel" id="cartPanel">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <button class="cart-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <p class="cart-empty">No games in cart yet.</p>
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <strong id="cartTotal">$0.00</strong>
+                    </div>
+                    <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="game-modal" id="gameModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-meta">
+                        <span id="modalCategory"></span>
+                        <span id="modalPrice"></span>
+                    </div>
+                    <div class="modal-rating" id="modalRating"></div>
+                    <p id="modalDescription"></p>
+                    <div class="modal-stats">
+                        <div><strong id="modalDownloads">0</strong> Downloads</div>
+                        <div><strong id="modalReviews">0</strong> Reviews</div>
+                    </div>
+                    <div class="modal-comments-section">
+                        <h3>Comments</h3>
+                        <div class="modal-comments" id="modalComments"></div>
+                    </div>
+                    <button class="btn-download modal-download" id="modalDownloadBtn">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
